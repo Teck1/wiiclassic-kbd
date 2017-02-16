@@ -9,3 +9,7 @@ The program uses linux/uinput.h to allow the classic controller to be used as a 
 
 Current functionality: buttons emulate keyboard key press / releases. The analog joysticks can be read, but are currently unused.
 
+With RPi:
+- run raspi-config, select Advanced, enable I2C.
+- install libi2c-dev and i2c-tools packages
+
