@@ -468,10 +468,10 @@ main(int argc,char **argv) {
 		else
 			continue;
 			
-		if ( f_debug )
+		if ( f_debug ){
 			printf("delta: %i\n",delta_count);
 			dump_data_classic(&cl_data, &cl_last);	/* Dump nunchuk data */
-		
+		}
 		
 		//Button logic is (dataB-lastB), if 0, no action happened. If 1, button down, if -1 button up
 		for(n = 0; n < (sizeof(cl_data.B)/sizeof(cl_data.B[0])); n++){
