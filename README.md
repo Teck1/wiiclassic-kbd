@@ -13,3 +13,8 @@ With RPi:
 - run raspi-config, select Advanced, enable I2C.
 - install libi2c-dev and i2c-tools packages
 
+gcc -o classic classic.c
+mv classic /usr/local/bin
+chmod 755 /usr/local/bin/classic
+
+sed -i "s/^exit 0/\/usr\/local\/bin\/classic \&\\nexit 0/g" /etc/rc.local >/dev/null
