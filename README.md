@@ -14,8 +14,11 @@ With RPi:
 - install libi2c-dev and i2c-tools packages
 
 `gcc -o classic classic.c`
+
+Run at startup:
 `mv classic /usr/local/bin`
 `chmod 755 /usr/local/bin/classic`
-
 `sed -i "s/^exit 0/\/usr\/local\/bin\/classic \&\\nexit 0/g" /etc/rc.local >/dev/null`
 
+Also this to enable controller with game emulators:
+`echo "SUBSYSTEM==\"input\", ATTRS{name}==\"classic\", ENV{ID_INPUT_KEYBOARD}=\"1\"" > /etc/udev/rules.d/10-classic.rules'
