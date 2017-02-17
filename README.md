@@ -21,4 +21,4 @@ Run at startup:
 `sed -i "s/^exit 0/\/usr\/local\/bin\/classic \&\\nexit 0/g" /etc/rc.local >/dev/null`
 
 Also this to enable controller with game emulators:
-`echo "SUBSYSTEM==\"input\", ATTRS{name}==\"classic\", ENV{ID_INPUT_KEYBOARD}=\"1\"" > /etc/udev/rules.d/10-classic.rules'
+`echo "SUBSYSTEM==\"input\", ATTRS{name}==\"classic\", ENV{ID_INPUT_KEYBOARD}=\"1\"" > /etc/udev/rules.d/10-classic.rules`
